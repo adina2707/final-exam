@@ -1,0 +1,302 @@
+/* Общие стили для всех страниц */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f7f7f7;
+    color: #5d3e72; /* Мягкий фиолетовый для текста */
+}
+
+/* Стиль для навигационной панели */
+nav {
+    background-color: #9b6dc1; /* Лавандовый фон */
+    padding: 10px 20px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000; /* Чтобы панель всегда была сверху */
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center; /* Центрируем элементы */
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+    transition: color 0.3s ease; /* Плавный переход для цвета */
+}
+
+nav ul li a:hover {
+    color: #e8d9f1; /* Цвет ссылки при наведении */
+}
+
+/* Главная страница */
+.hero {
+    text-align: center;
+    padding: 100px 20px;
+    background-image: url('images/flowers-hero.jpg');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    min-height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.hero h1 {
+    font-size: 48px;
+    color: #6a3b96;
+    margin-bottom: 15px;
+}
+
+.hero p {
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+.hero .shop-now {
+    text-decoration: none;
+    background-color: #9b6dc1;
+    padding: 15px 25px;
+    color: white;
+    font-weight: bold;
+    border-radius: 5px;
+    margin-top: 20px;
+    transition: background-color 0.3s ease;
+}
+
+.hero .shop-now:hover {
+    background-color: #7f5ca6;
+}
+
+/* Секция магазина */
+.store {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 20px;
+    padding: 60px 20px;
+    background-color: #f7f7f7;
+}
+
+.product-card {
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, filter 0.3s ease;
+    cursor: pointer;
+}
+
+.product-card:hover {
+    transform: translateY(-10px); /* Легкое поднятие */
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15); /* Усиленная тень */
+    filter: brightness(1.1); /* Немного увеличиваем яркость */
+}
+
+.product-card img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.product-card:hover img {
+    transform: scale(1.05); /* Легкое увеличение изображения при наведении */
+}
+
+.product-card .product-info {
+    padding: 20px;
+    text-align: center;
+}
+
+.product-card h3 {
+    font-size: 22px;
+    color: #6a3b96;
+    margin-bottom: 10px;
+    transition: color 0.3s ease;
+}
+
+.product-card h3:hover {
+    color: #7f5ca6;
+}
+
+.product-card p {
+    font-size: 18px;
+    color: #5d3e72;
+    margin-bottom: 15px;
+}
+
+.product-card .price {
+    font-size: 20px;
+    color: #9b6dc1;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.product-card button {
+    background-color: #9b6dc1;
+    color: white;
+    padding: 12px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    width: 100%;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.product-card button:hover {
+    background-color: #7f5ca6;
+    transform: scale(1.05);
+}
+
+/* Секция отзывов */
+.reviews {
+    background-color: #f9f1ff;
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.reviews h2 {
+    font-size: 36px;
+    color: #6a3b96;
+    margin-bottom: 40px;
+}
+
+.review-card {
+    background-color: white;
+    padding: 30px;
+    margin: 20px;
+    border-radius: 12px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.review-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.review-card .review-text {
+    font-size: 18px;
+    color: #5d3e72;
+    margin-bottom: 20px;
+}
+
+.review-card .review-author {
+    font-size: 20px;
+    color: #6a3b96;
+    font-weight: bold;
+}
+
+/* Стили для корзины */
+.cart {
+    padding: 40px;
+    text-align: center;
+}
+
+.cart-item {
+    margin: 10px 0;
+}
+
+.cart-item button {
+    background-color: #e8d9f1;
+    color: #6a3b96;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.cart-item button:hover {
+    background-color: #d1b6e7;
+}
+
+/* Общий стиль для кнопок */
+button {
+    border: none;
+    outline: none;
+}
+
+/* Анимации для кнопок */
+button:hover {
+    transform: scale(1.05);
+    transition: all 0.3s ease-in-out;
+}
+
+/* Стили для страницы контактов */
+.contact {
+    padding: 40px;
+    text-align: center;
+}
+
+.contact h1 {
+    font-size: 36px;
+    color: #6a3b96;
+}
+
+.contact form {
+    display: block;
+    width: 300px;
+    margin: 0 auto;
+    background-color: #f9f1ff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.contact label {
+    font-size: 16px;
+    color: #6a3b96;
+    display: block;
+    margin: 10px 0 5px;
+}
+
+.contact input, .contact textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.contact button {
+    width: 100%;
+    background-color: #9b6dc1;
+    color: white;
+    padding: 12px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.contact button:hover {
+    background-color: #7f5ca6;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
